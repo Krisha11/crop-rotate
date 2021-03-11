@@ -1,8 +1,8 @@
 flags = -Werror -Wall -Wextra -Wpedantic
-all: hw_01
+all: main
 
-hw_01: obj/ obj/bmp.o obj/main.o
-	gcc obj/bmp.o obj/main.o -o hw_01
+main: obj/ obj/bmp.o obj/main.o
+	gcc obj/bmp.o obj/main.o -o main
 obj/bmp.o:
 	gcc -c $(flags) src/bmp.c -o obj/bmp.o -I include/
 obj/main.o:
